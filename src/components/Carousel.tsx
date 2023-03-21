@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 interface CarouselItem {
@@ -66,12 +65,10 @@ export default function Carousel({
 							transform: `translateX(-${activeIndex * 100}%)`,
 						}}
 					>
-						<Image
+						<img
 							src={src}
 							alt={alt}
-							fill
-							sizes='(max-width: 768px) 75vw, (max-width: 1280px) 100vw'
-							className='object-cover'
+							className='absolute block w-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'
 						/>
 					</div>
 				))}
