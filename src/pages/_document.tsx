@@ -20,6 +20,19 @@ export default function Document() {
 				<meta httpEquiv='Content-Type' content='text/html' />
 				<meta httpEquiv='Content-Style-Type' content='text/css' />
 				<meta httpEquiv='Content-Script-Type' content='text/javascript' />
+				{/* Open Graph */}
+				<meta property='og:title' content='Terrandro' />
+				<meta property='og:type' content='article' />
+				<meta property='og:description' content='Terrari' />
+				<meta
+					property='og:image'
+					content='https://terrandro.com/images/logo.png'
+				/>
+				<meta property='og:url' content='https://terrandro.com/' />
+				<meta property='og:site_name' content='Terrandro' />
+				{/* Twitter */}
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta name='twitter:image:alt' content='Alt text for image' />
 			</Head>
 			<body>
 				<Main />
