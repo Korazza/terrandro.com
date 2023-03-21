@@ -9,9 +9,9 @@ interface NavigationItem {
 }
 
 const navItems: NavigationItem[] = [
-	{ label: 'Intandro', link: '#' },
-	{ label: 'Terrari', link: '#' },
-	{ label: 'Bobcat', link: '#' },
+	{ label: 'Aperti', link: '#' },
+	{ label: 'In barattolo', link: '#' },
+	{ label: 'Vasetti', link: '#' },
 ]
 
 export default function Sidebar() {
@@ -34,7 +34,8 @@ export default function Sidebar() {
 				}
 			>
 				<div className='h-full px-4 pt-4'>
-					<ul className='space-y-2'>
+					<span className='p-2 font-semibold text-lg'>Categorie</span>
+					<ul className='mt-2 space-y-1'>
 						{navItems.map(({ label, link, scroll }) => (
 							<li key={label.toLocaleLowerCase()}>
 								<Link
