@@ -5,7 +5,7 @@ export default function Document() {
 		<Html lang='it'>
 			<Head>
 				<meta name='description' content='Terrari' />
-				{/*<meta name='keywords' content='' />*/}
+				<meta name='keywords' content='terrandro, terrario, terrari' />
 				<meta name='robots' content='index, follow' />
 				<meta charSet='UTF-8' />
 				<meta httpEquiv='Content-Type' content='text/html; charset=UTF-8' />
