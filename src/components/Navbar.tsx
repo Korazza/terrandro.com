@@ -107,11 +107,11 @@ export default function Navbar() {
 											}
 										/>
 										<span className='sr-only'>Toggle dark mode</span>
+										<span className='relative md:hidden left-6 text-lg select-none'>
+											{darkModeName}
+										</span>
 									</button>
 								</Tooltip>
-								<span className='md:hidden ml-2 text-lg select-none'>
-									{darkModeName}
-								</span>
 							</li>
 						</ul>
 					</div>
