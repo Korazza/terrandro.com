@@ -2,9 +2,11 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaBars, FaMoon, FaSun } from 'react-icons/fa'
+import { FaBars, FaDesktop, FaMoon, FaSun } from 'react-icons/fa'
 
 import { useDarkMode } from '@/hooks/useDarkMode'
+import { DarkMode } from '@/contexts/darkMode'
+import Tooltip from '@/components/Tooltip'
 
 interface NavigationItem {
 	label: string
@@ -49,7 +51,10 @@ export default function Navbar() {
 						<FaBars className='w-6 h-6' />
 					</button>
 					<div
-						className={(!toggle ? 'hidden ' : '') + 'absolute w-2/3 h-[100lvh] pt-10 top-0 right-0 border-l border-slate-300/75 dark:border-slate-600/75 bg-slate-300/90 dark:bg-slate-900/90 md:static md:w-auto md:h-auto md:block md:pt-0 md:bg-transparent md:dark:bg-transparent md:border-none'}
+						className={
+							(!toggle ? 'hidden ' : '') +
+							'absolute w-2/3 h-[100lvh] pt-10 top-0 right-0 border-l border-slate-300/75 dark:border-slate-600/75 bg-slate-300/90 dark:bg-slate-900/90 md:static md:w-auto md:h-auto md:block md:pt-0 md:bg-transparent md:dark:bg-transparent md:border-none'
+						}
 					>
 						<ul className='flex flex-col p-4 mt-4 md:flex-row md:place-items-center space-y-4 md:space-y-0 md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0'>
 							{navItems.map(({ label, link, scroll }) => (
@@ -69,25 +74,44 @@ export default function Navbar() {
 								</li>
 							))}
 							<li>
-								<button
-									type='button'
-									className='relative w-5 h-5 inline-flex items-center p-4 text-sm rounded-lg transition-colors duration-300 ease-in-out bg-zinc-500 dark:bg-yellow-200 '
-									onClick={toggleDarkMode}
-								>
-									<FaSun
+								<Tooltip text={`Dark mode: ${DarkMode[darkMode]}`}>
+									<button
+										type='button'
 										className={
-											'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-700 transition-opacity duration-500 ease-out' +
-											(darkMode ? ' opacity-1' : ' opacity-0')
+											'relative group w-5 h-5 inline-flex items-center p-4 text-sm rounded-lg transition-colors duration-300 ease-in-out' +
+											(darkMode === DarkMode.system
+												? ' bg-sky-600 dark:bg-sky-300'
+												: ' bg-zinc-500 dark:bg-yellow-200')
 										}
-									/>
-									<FaMoon
-										className={
-											'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-100 transition-opacity duration-500 ease-out' +
-											(darkMode ? ' opacity-0' : ' opacity-1')
-										}
-									/>
-									<span className='sr-only'>Toggle dark mode</span>
-								</button>
+										onClick={toggleDarkMode}
+									>
+										<FaDesktop
+											className={
+												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-200 dark:text-slate-600 dark transition-opacity duration-500 ease-out' +
+												(darkMode === DarkMode.system
+													? ' opacity-1'
+													: ' opacity-0')
+											}
+										/>
+										<FaSun
+											className={
+												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-700 transition-opacity duration-500 ease-out' +
+												(darkMode === DarkMode.dark
+													? ' opacity-1'
+													: ' opacity-0')
+											}
+										/>
+										<FaMoon
+											className={
+												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-100 transition-opacity duration-500 ease-out' +
+												(darkMode === DarkMode.light
+													? ' opacity-1'
+													: ' opacity-0')
+											}
+										/>
+										<span className='sr-only'>Toggle dark mode</span>
+									</button>
+								</Tooltip>
 							</li>
 						</ul>
 					</div>

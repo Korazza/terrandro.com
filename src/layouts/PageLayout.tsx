@@ -10,11 +10,11 @@ interface Props {
 }
 
 export default function PageLayout({ children }: Props) {
-	const { darkMode } = useDarkMode()
+	const { dark } = useDarkMode()
 	return (
 		<>
 			<Head>
-				{darkMode ? (
+				{dark ? (
 					<meta name='theme-color' content='#1e293b' />
 				) : (
 					<meta name='theme-color' content='#a3e635' />

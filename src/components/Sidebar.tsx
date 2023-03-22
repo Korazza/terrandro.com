@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { FaBars, FaGripLines, FaSort } from 'react-icons/fa'
+import { FaSort } from 'react-icons/fa'
 
 interface NavigationItem {
 	label: string
@@ -29,7 +29,7 @@ export default function Sidebar() {
 			</button>
 			<aside
 				className={
-					'fixed top-20 left-0 z-40 w-40 h-full transition-transform md:transform-none -translate-x-full bg-slate-200 dark:bg-slate-800 md:border-r-2 border-solid border-slate-500/25 dark:border-slate-50/25' +
+					'fixed top-20 left-0 z-40 w-40 h-full transition-transform md:transform-none -translate-x-full bg-slate-200 dark:bg-slate-800 md:border-r border-solid border-slate-300/75 dark:border-slate-600/75' +
 					(toggle ? ' transform-none' : '')
 				}
 			>
@@ -41,7 +41,7 @@ export default function Sidebar() {
 								<Link
 									href={link}
 									scroll={scroll}
-									className='flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
+									className='flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:shadow-sm transition-colors duration-300 ease-in-out'
 								>
 									<span className='flex-1 whitespace-nowrap'>{label}</span>
 								</Link>

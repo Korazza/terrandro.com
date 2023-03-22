@@ -8,7 +8,7 @@ interface CarouselItem {
 
 export type CarouselItems = CarouselItem[]
 
-interface CarouselProps {
+interface Props {
 	items: CarouselItems
 	autoPlay?: boolean
 	duration?: number
@@ -18,7 +18,7 @@ export default function Carousel({
 	items,
 	autoPlay = true,
 	duration = 3.5,
-}: CarouselProps) {
+}: Props) {
 	const [activeIndex, setActiveIndex] = useState(0)
 	const intervalId = useRef<NodeJS.Timer>()
 
@@ -75,7 +75,7 @@ export default function Carousel({
 			</div>
 			<button
 				type='button'
-				className='absolute top-0 left-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer'
+				className='absolute top-0 left-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer !outline-none'
 				onClick={prev}
 			>
 				<span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-200/30 dark:bg-slate-800/30 md:backdrop-blur-sm'>
@@ -85,7 +85,7 @@ export default function Carousel({
 			</button>
 			<button
 				type='button'
-				className='absolute top-0 right-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer'
+				className='absolute top-0 right-0 z-10 flex items-center justify-center h-full px-4 cursor-pointer focus:outline-0'
 				onClick={next}
 			>
 				<span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-200/30 dark:bg-slate-800/30 md:backdrop-blur-sm'>
