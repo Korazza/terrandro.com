@@ -16,24 +16,12 @@ export default function Home() {
 					<Carousel items={carouselImages} />
 				</div>
 			</section>
-			<section className='px-10 md:px-20 lg:px-40 pb-10'>
-				<div className='mt-20 max-w-sm animate-pulse'>
-					<div className='h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-48 mb-4' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[360px] mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[330px] mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[300px] mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[360px]' />
-					<span className='sr-only'>Loading...</span>
-				</div>
-				<div className='mt-6 max-w-lg animate-pulse'>
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[500px] mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[430px] mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[470px] mb-2.5' />
-					<div className='h-2 bg-slate-300 rounded-full dark:bg-slate-700 max-w-[490px]' />
-					<span className='sr-only'>Loading...</span>
-				</div>
+			<section className='px-4 md:px-10 lg:px-20 xl:px-40 pb-10 w-full lg:w-2/3 2xl:w-3/5'>
+				Ciao a tutti, questa pagina è stata realizzata per promuovere questa
+				piccola attività che ho aperto. Nata da una passione sbocciata
+				nell'ultimo anno, questa attività propone di realizzare terrari
+				scegliendo con cura piante e vasi di vario genere , per portare un po'
+				di verde nelle nostre case.
 			</section>
 		</>
 	)
