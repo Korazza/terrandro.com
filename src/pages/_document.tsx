@@ -6,7 +6,7 @@ export default function Document() {
 			<Head>
 				<meta charSet='UTF-8' />
 				<meta name='language' content='italian' />
-				<meta name='description' content='Terrari' />
+				<meta name='description' content='Terrari e molto altro' />
 				<meta name='keywords' content='Terrandro,Terrario,Terrari' />
 				<meta name='robots' content='index,follow' />
 				<meta name='distribution' content='web' />
