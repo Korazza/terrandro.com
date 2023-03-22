@@ -73,12 +73,12 @@ export default function Navbar() {
 									</Link>
 								</li>
 							))}
-							<li>
-								<Tooltip text={`Dark mode: ${DarkMode[darkMode]}`}>
+							<li className='flex place-items-center capitalize'>
+								<Tooltip text={DarkMode[darkMode]}>
 									<button
 										type='button'
 										className={
-											'relative group w-5 h-5 inline-flex items-center p-4 text-sm rounded-lg transition-colors duration-300 ease-in-out' +
+											'relative group w-5 h-5 inline-flex items-center p-4 text-sm rounded-lg transition-colors delay-150 duration-300 ease-in-out' +
 											(darkMode === DarkMode.system
 												? ' bg-sky-600 dark:bg-sky-300'
 												: ' bg-amber-300 dark:bg-zinc-500')
@@ -106,6 +106,9 @@ export default function Navbar() {
 										<span className='sr-only'>Toggle dark mode</span>
 									</button>
 								</Tooltip>
+								<span className='md:hidden ml-2 text-lg'>
+									{DarkMode[darkMode]}
+								</span>
 							</li>
 						</ul>
 					</div>
