@@ -16,7 +16,7 @@ export default function Home() {
 					<Carousel items={carouselImages} />
 				</div>
 			</section>
-			<section className='px-4 md:px-10 lg:px-20 xl:px-40 pb-10 w-full lg:w-2/3 2xl:w-3/5'>
+			<section className='px-4 text-lg md:px-10 lg:px-20 xl:px-40 pb-10 w-full lg:w-2/3 2xl:w-3/5'>
 				Ciao a tutti, questa pagina è stata realizzata per promuovere questa
 				piccola attività che ho aperto. Nata da una passione sbocciata
 				nell'ultimo anno, questa attività propone di realizzare terrari
