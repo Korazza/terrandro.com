@@ -24,6 +24,9 @@ export default function Navbar() {
 	const router = useRouter()
 	const { darkMode, dark, toggleDarkMode } = useDarkMode()
 
+	const darkModeName: string =
+		darkMode === DarkMode.system ? 'Sistema' : dark ? 'Scuro' : 'Chiaro'
+
 	return (
 		<header className='fixed top-0 w-full h-20 z-50 bg-slate-200/50 dark:bg-slate-800/50 backdrop-blur-[10px] shadow-md'>
 			<nav className='h-full px-2 sm:px-4 py-1'>
@@ -74,7 +77,7 @@ export default function Navbar() {
 								</li>
 							))}
 							<li className='flex place-items-center capitalize'>
-								<Tooltip text={DarkMode[darkMode]}>
+								<Tooltip text={darkModeName}>
 									<button
 										type='button'
 										className={
@@ -107,7 +110,7 @@ export default function Navbar() {
 									</button>
 								</Tooltip>
 								<span className='md:hidden ml-2 text-lg select-none'>
-									{DarkMode[darkMode]}
+									{darkModeName}
 								</span>
 							</li>
 						</ul>
