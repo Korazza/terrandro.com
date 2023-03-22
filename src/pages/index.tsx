@@ -10,13 +10,13 @@ const carouselImages: CarouselItems = [
 export default function Home() {
 	return (
 		<>
-			<h1 className='px-10 md:px-20 lg:px-40 py-6 text-2xl'>Intaandro</h1>
+			<h1 className='px-4 md:px-10 lg:px-20 xl:px-40 py-6 text-2xl'>Intaandro</h1>
 			<section className='w-full px-0 md:px-5 xl:px-40 mb-10 md:mb-6 lg:mb-10'>
 				<div className='w-full mx-auto lg:w-4/5 xl:w-2/3 2xl:w-1/2'>
 					<Carousel items={carouselImages} />
 				</div>
 			</section>
-			<section className='px-4 text-lg md:px-10 lg:px-20 xl:px-40 pb-10 w-full lg:w-2/3 2xl:w-3/5'>
+			<section className='text-lg px-4 md:px-10 lg:px-20 xl:px-40 pb-10 w-full lg:w-2/3 2xl:w-3/5'>
 				Ciao a tutti, questa pagina è stata realizzata per promuovere questa
 				piccola attività che ho aperto. Nata da una passione sbocciata
 				nell'ultimo anno, questa attività propone di realizzare terrari
