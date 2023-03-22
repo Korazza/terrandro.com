@@ -55,7 +55,9 @@ export default function Navbar() {
 					</button>
 					<div
 						className={
-							(!toggle ? 'translate-x-full' : '-translate-x-0') +
+							(!toggle
+								? 'translate-x-full md:translate-x-0'
+								: '-translate-x-0') +
 							' absolute w-2/3 h-[100lvh] pt-10 top-0 right-0 border-l border-slate-300/75 dark:border-slate-600/75 bg-slate-300/90 dark:bg-slate-900/90 md:static md:w-auto md:h-auto md:block md:pt-0 md:bg-transparent md:dark:bg-transparent md:border-none transition-transform'
 						}
 					>
