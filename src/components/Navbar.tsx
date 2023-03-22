@@ -71,6 +71,7 @@ export default function Navbar() {
 												? ' bg-lime-400 dark:bg-lime-300 dark:text-slate-700'
 												: ' text-slate-700 hover:bg-slate-300 hover:text-slate-900 dark:hover:bg-slate-700 dark:text-slate-300 dark:hover:text-slate-50 transition-colors duration-300 ease-in-out')
 										}
+										onClick={() => setToggle(false)}
 									>
 										{label}
 									</Link>
