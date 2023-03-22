@@ -22,7 +22,7 @@ export default function PageLayout({ children }: Props) {
 			</Head>
 			<Navbar />
 			<Sidebar />
-			<main className='relative top-20 md:left-40 md:max-w-[calc(100%-10rem)] max-h-[calc(100%-5rem)] w-full'>
+			<main className='relative top-8 md:top-20 md:left-40 md:max-w-[calc(100%-10rem)] max-h-[calc(100%-5rem)] w-full'>
 				{children}
 				<Footer />
 			</main>
