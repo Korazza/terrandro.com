@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaBars, FaDesktop, FaMoon, FaSun } from 'react-icons/fa'
+import { FaBars, FaMoon, FaSun } from 'react-icons/fa'
 
 import { useDarkMode } from '@/hooks/useDarkMode'
 import { DarkMode } from '@/contexts/darkMode'
@@ -22,7 +22,7 @@ const navItems: NavigationItem[] = [
 export default function Navbar() {
 	const [toggle, setToggle] = useState(false)
 	const router = useRouter()
-	const { darkMode, toggleDarkMode } = useDarkMode()
+	const { darkMode, dark, toggleDarkMode } = useDarkMode()
 
 	return (
 		<header className='fixed top-0 w-full h-20 z-50 bg-slate-200/50 dark:bg-slate-800/50 backdrop-blur-[10px] shadow-md'>
@@ -81,32 +81,26 @@ export default function Navbar() {
 											'relative group w-5 h-5 inline-flex items-center p-4 text-sm rounded-lg transition-colors duration-300 ease-in-out' +
 											(darkMode === DarkMode.system
 												? ' bg-sky-600 dark:bg-sky-300'
-												: ' bg-zinc-500 dark:bg-yellow-200')
+												: ' bg-amber-300 dark:bg-zinc-500')
 										}
 										onClick={toggleDarkMode}
 									>
-										<FaDesktop
-											className={
-												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-200 dark:text-slate-600 dark transition-opacity duration-500 ease-out' +
-												(darkMode === DarkMode.system
-													? ' opacity-1'
-													: ' opacity-0')
-											}
-										/>
 										<FaSun
 											className={
-												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-700 transition-opacity duration-500 ease-out' +
-												(darkMode === DarkMode.dark
-													? ' opacity-1'
-													: ' opacity-0')
+												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-out' +
+												(dark ? ' opacity-0' : ' opacity-100') +
+												(darkMode === DarkMode.system
+													? ' text-slate-300 dark:text-slate-600'
+													: ' text-slate-600')
 											}
 										/>
 										<FaMoon
 											className={
 												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-100 transition-opacity duration-500 ease-out' +
-												(darkMode === DarkMode.light
-													? ' opacity-1'
-													: ' opacity-0')
+												(dark ? ' opacity-100' : ' opacity-0') +
+												(darkMode === DarkMode.system
+													? ' text-slate-300 dark:text-slate-600'
+													: ' text-slate-100')
 											}
 										/>
 										<span className='sr-only'>Toggle dark mode</span>
