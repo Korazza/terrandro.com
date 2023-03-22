@@ -28,7 +28,7 @@ export default function Navbar() {
 		darkMode === DarkMode.system ? 'Sistema' : dark ? 'Scuro' : 'Chiaro'
 
 	return (
-		<header className='fixed top-0 w-full h-20 z-50 bg-slate-200/50 dark:bg-slate-800/50 backdrop-blur-[10px] shadow-md'>
+		<header className='fixed top-0 w-full h-20 z-50 bg-slate-200/50 dark:bg-slate-800/75 backdrop-blur-[10px] shadow-md'>
 			<nav className='h-full px-2 sm:px-4 py-1'>
 				<div className='h-full container flex flex-wrap items-center justify-between mx-auto'>
 					<Link href='/' className='flex items-center'>
