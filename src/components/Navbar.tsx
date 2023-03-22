@@ -55,8 +55,8 @@ export default function Navbar() {
 					</button>
 					<div
 						className={
-							(!toggle ? 'hidden ' : '') +
-							'absolute w-2/3 h-[100lvh] pt-10 top-0 right-0 border-l border-slate-300/75 dark:border-slate-600/75 bg-slate-300/90 dark:bg-slate-900/90 md:static md:w-auto md:h-auto md:block md:pt-0 md:bg-transparent md:dark:bg-transparent md:border-none'
+							(!toggle ? 'translate-x-full' : '-translate-x-0') +
+							' absolute w-2/3 h-[100lvh] pt-10 top-0 right-0 border-l border-slate-300/75 dark:border-slate-600/75 bg-slate-300/90 dark:bg-slate-900/90 md:static md:w-auto md:h-auto md:block md:pt-0 md:bg-transparent md:dark:bg-transparent md:border-none transition-transform'
 						}
 					>
 						<ul className='flex flex-col p-4 mt-4 md:flex-row md:place-items-center space-y-4 md:space-y-0 md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0'>
