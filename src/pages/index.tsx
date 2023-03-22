@@ -20,8 +20,8 @@ export default function Home() {
 				Ciao a tutti, questa pagina è stata realizzata per promuovere questa
 				piccola attività che ho aperto. Nata da una passione sbocciata
 				nell'ultimo anno, questa attività propone di realizzare terrari
-				scegliendo con cura piante e vasi di vario genere , per portare un po'
-				di verde nelle nostre case.
+				scegliendo con cura piante e vasi di vario genere, per portare un po' di
+				verde nelle nostre case.
 			</section>
 		</>
 	)
