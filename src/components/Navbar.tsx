@@ -76,21 +76,28 @@ export default function Navbar() {
 									</Link>
 								</li>
 							))}
-							<li className='flex place-items-center capitalize'>
+							<li
+								className={
+									'flex place-items-center w-fit capitalize md:!bg-transparent rounded-lg md:rounded-none' +
+									(darkMode === DarkMode.system
+										? ' bg-sky-600 dark:bg-sky-300'
+										: ' bg-amber-300 dark:bg-zinc-500')
+								}
+							>
 								<Tooltip text={darkModeName}>
 									<button
 										type='button'
 										className={
-											'relative group w-5 h-5 inline-flex items-center p-4 text-sm rounded-lg transition-colors delay-150 duration-300 ease-in-out' +
+											'relative flex-grow md:w-5 h-5 inline-flex items-center p-4 text-sm rounded-lg transition-colors delay-150 duration-300 ease-in-out' +
 											(darkMode === DarkMode.system
-												? ' bg-sky-600 dark:bg-sky-300'
+												? ' text-slate-100 dark:text-slate-600 bg-sky-600 dark:bg-sky-300'
 												: ' bg-amber-300 dark:bg-zinc-500')
 										}
 										onClick={toggleDarkMode}
 									>
 										<FaSun
 											className={
-												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-out' +
+												'absolute inset-0 w-5 h-5 left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-out' +
 												(dark ? ' opacity-0' : ' opacity-100') +
 												(darkMode === DarkMode.system
 													? ' text-slate-300 dark:text-slate-600'
@@ -99,17 +106,17 @@ export default function Navbar() {
 										/>
 										<FaMoon
 											className={
-												'absolute w-5 h-5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-100 transition-opacity duration-500 ease-out' +
+												'absolute inset-0 w-5 h-5 left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-slate-100 transition-all duration-500 ease-out' +
 												(dark ? ' opacity-100' : ' opacity-0') +
 												(darkMode === DarkMode.system
 													? ' text-slate-300 dark:text-slate-600'
 													: ' text-slate-100')
 											}
 										/>
-										<span className='sr-only'>Toggle dark mode</span>
-										<span className='relative md:hidden left-6 text-lg select-none'>
+										<span className='relative md:hidden pl-4 text-lg select-none'>
 											{darkModeName}
 										</span>
+										<span className='sr-only'>Toggle dark mode</span>
 									</button>
 								</Tooltip>
 							</li>
