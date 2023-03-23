@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<meta
 					key='keywords'
 					name='keywords'
-					content='Terrandro,Terrario,Terrari'
+					content='Terrandro,Terrario,Terrari,Terrarium'
 				/>
 				<link
 					rel='shortcut icon'
