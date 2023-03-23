@@ -21,6 +21,7 @@ export default function Document() {
 				<meta httpEquiv='Content-Type' content='text/html' />
 				<meta httpEquiv='Content-Style-Type' content='text/css' />
 				<meta httpEquiv='Content-Script-Type' content='text/javascript' />
+				<link rel='canonical' href='https://terrandro.com' />
 			</Head>
 			<body>
 				<Main />
