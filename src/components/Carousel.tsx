@@ -95,20 +95,19 @@ export default function Carousel({
 			</button>
 			<div className='absolute z-10 flex space-x-3 place-items-center -translate-x-1/2 bottom-5 left-1/2'>
 				{items.map((_, index) => (
-					<>
-						<button
-							key={index}
-							type='button'
-							className={
-								'w-3 h-3 rounded-full' +
-								(activeIndex === index
-									? ' scale-125 bg-slate-200 dark:bg-slate-400'
-									: ' bg-slate-400 dark:bg-slate-600')
-							}
-							onClick={() => slideTo(index)}
-						/>
+					<button
+						key={index}
+						type='button'
+						className={
+							'w-3 h-3 rounded-full' +
+							(activeIndex === index
+								? ' scale-125 bg-slate-200 dark:bg-slate-400'
+								: ' bg-slate-400 dark:bg-slate-600')
+						}
+						onClick={() => slideTo(index)}
+					>
 						<span className='sr-only'>Slide to {index}</span>
-					</>
+					</button>
 				))}
 			</div>
 		</div>
