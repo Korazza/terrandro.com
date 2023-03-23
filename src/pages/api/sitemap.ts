@@ -6,7 +6,7 @@ export default function handler(_: NextApiRequest, res: NextApiResponse) {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>http://terrandro.com/</loc>
-      <lastmod>${new Date().toISOString()}</lastmod>
+      <lastmod>${new Date().toJSON().substring(0, 10)}</lastmod>
     </url>
   </urlset>`
 	res.statusCode = 200
