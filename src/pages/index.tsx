@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import Carousel, { CarouselItems } from '@/components/Carousel'
 
 const carouselImages: CarouselItems = [
@@ -10,6 +12,10 @@ const carouselImages: CarouselItems = [
 export default function Home() {
 	return (
 		<>
+			<Head>
+				<title>Terrandro - Home</title>
+				<meta key='og:title' property='og:title' content='Terrandro - Home' />
+			</Head>
 			<h1 className='px-4 md:px-10 lg:px-20 xl:px-40 mt-2 md:mt-0 py-2 md:py-6 text-2xl'>
 				Intaandro
 			</h1>
