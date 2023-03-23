@@ -22,7 +22,7 @@ const socials: Social[] = [
 
 export default function Footer() {
 	return (
-		<footer className='z-40 relative bottom-0 pt-2 w-full bg-slate-200 dark:bg-slate-800'>
+		<footer className='z-40 relative bottom-0 mt-2 md:mt-6 w-full bg-slate-200 dark:bg-slate-800'>
 			<div className='flex flex-col'>
 				<div className='flex flex-row place-content-center md:place-content-start'>
 					<div className='flex flex-col py-4 md:pl-20 lg:pl-40 space-y-4'>
