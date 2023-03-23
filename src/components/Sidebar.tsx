@@ -34,7 +34,7 @@ export default function Sidebar() {
 				}
 			>
 				<div className='h-full px-4 pt-4'>
-					<span className='p-2 font-semibold text-lg'>Categorie</span>
+					<span className='p-2 font-semibold text-lg opacity-40'>Categorie</span>
 					<ul className='mt-2 space-y-1'>
 						{navItems.map(({ label, link, scroll }) => (
 							<li key={label.toLocaleLowerCase()}>
