@@ -11,6 +11,10 @@ export default function handler(_: NextApiRequest, res: NextApiResponse) {
       <loc>${WEBSITE_URL}/</loc>
       <lastmod>${LAST_MOD}</lastmod>
     </url>
+    <url>
+      <loc>${WEBSITE_URL}/galleria</loc>
+      <lastmod>${LAST_MOD}</lastmod>
+    </url>
   </urlset>`
 	res.statusCode = 200
 	res.end(xml)
