@@ -62,6 +62,7 @@ export default function Contatti({ media }: Props) {
 									) : (
 										<img
 											src={media_url}
+											alt={permalink}
 											className='w-full object-cover aspect-square md:rounded-lg mb-2 md:mb-0'
 										/>
 									)}
