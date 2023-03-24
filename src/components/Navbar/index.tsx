@@ -4,17 +4,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaBars, FaMoon, FaSun } from 'react-icons/fa'
 
+import { NavigationItems } from './types'
 import { useDarkMode } from '@/hooks/useDarkMode'
 import { DarkMode } from '@/contexts/darkMode'
 import Tooltip from '@/components/Tooltip'
 
-interface NavigationItem {
-	label: string
-	link: string
-	scroll?: boolean
-}
-
-const navItems: NavigationItem[] = [
+const navItems: NavigationItems = [
 	{ label: 'Home', link: '/' },
 	{ label: 'Contatti', link: '/contatti' },
 ]

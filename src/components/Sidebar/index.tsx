@@ -2,13 +2,9 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { FaSort } from 'react-icons/fa'
 
-interface NavigationItem {
-	label: string
-	link: string
-	scroll?: boolean
-}
+import { NavigationItems } from '@/components/Navbar/types'
 
-const navItems: NavigationItem[] = [
+const navItems: NavigationItems = [
 	{ label: 'Aperti', link: '#' },
 	{ label: 'In barattolo', link: '#' },
 	{ label: 'Vasetti', link: '#' },
@@ -34,7 +30,9 @@ export default function Sidebar() {
 				}
 			>
 				<div className='h-full px-4 pt-4'>
-					<span className='p-2 font-semibold text-lg opacity-40'>Categorie</span>
+					<span className='p-2 font-semibold text-lg opacity-40'>
+						Categorie
+					</span>
 					<ul className='mt-2 space-y-1'>
 						{navItems.map(({ label, link, scroll }) => (
 							<li key={label.toLocaleLowerCase()}>

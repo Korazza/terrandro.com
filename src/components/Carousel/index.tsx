@@ -1,12 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
-interface CarouselItem {
-	src: string
-	alt: string
-}
-
-export type CarouselItems = CarouselItem[]
+import { CarouselItems } from './types'
 
 interface Props {
 	items: CarouselItems

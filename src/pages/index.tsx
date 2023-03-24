@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
-import Carousel, { CarouselItems } from '@/components/Carousel'
+import Carousel from '@/components/Carousel'
+import { CarouselItems } from '@/components/Carousel/types'
 
 const carouselImages: CarouselItems = [
 	{ src: '/images/terrario-1.jpg', alt: 'Terrario-1' },
@@ -25,7 +26,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className='text-lg px-4 md:px-10 lg:px-20 xl:px-40 py-2 md:py-6 w-full lg:w-2/3 2xl:w-3/5'>
-				Ciao a tutti, questa pagina è stata realizzata per promuovere questa
+				Ciao a tutti, questo sito è stato realizzato per promuovere questa
 				piccola attività che ho aperto. Nata da una passione sbocciata
 				nell'ultimo anno, questa attività propone di realizzare terrari
 				scegliendo con cura piante e vasi di vario genere, per portare un po' di
