@@ -63,12 +63,12 @@ export default function Contatti({ media }: Props) {
 										<img
 											src={media_url}
 											alt={permalink}
-											className='w-full object-cover aspect-square md:rounded-lg mb-2 md:mb-0'
+											className='w-full object-cover aspect-square md:rounded-lg mt-6 mb-2 md:my-0'
 										/>
 									)}
-									<span className='relative md:absolute w-full px-3 md:py-2 bottom-0 md:left-0 md:rounded-b-lg md:bg-slate-800/70 md:text-slate-200'>
+									<span className='relative md:absolute inline-block w-full px-3 md:py-2 bottom-0 md:left-0 md:rounded-b-lg md:bg-slate-800/70 md:text-slate-200'>
 										<span>{caption}</span>
-										<span className='block text-sm px-3 md:px-0'>
+										<span className='block text-sm opacity-70 pt-1 md:p-0'>
 											{new Date(timestamp)
 												.toLocaleString()
 												.replace(', ', ' - ')
