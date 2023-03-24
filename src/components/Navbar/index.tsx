@@ -11,7 +11,7 @@ import Tooltip from '@/components/Tooltip'
 
 const navItems: NavigationItems = [
 	{ label: 'Home', link: '/' },
-	{ label: 'Contatti', link: '/contatti' },
+	{ label: 'Galleria', link: '/galleria' },
 ]
 
 export default function Navbar() {
