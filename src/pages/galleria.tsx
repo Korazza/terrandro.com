@@ -49,7 +49,7 @@ export default function Contatti({ media }: Props) {
 									href={permalink}
 									key={id}
 									target='_blank'
-									className='relative shadow-md drop-shadow-2xl transition ease-in-out duration-300 lg:hover:scale-105'
+									className='relative md:shadow-md md:drop-shadow-2xl transition ease-in-out duration-300 lg:hover:scale-105'
 								>
 									{media_type.toLowerCase() === 'video' ? (
 										<video
@@ -65,9 +65,9 @@ export default function Contatti({ media }: Props) {
 											className='w-full object-cover aspect-square md:rounded-lg mb-2 md:mb-0'
 										/>
 									)}
-									<span className='relative md:absolute w-full md:px-3 md:py-2 bottom-0 left-3 md:left-0 md:rounded-b-lg md:bg-slate-800/70 text-slate-200'>
+									<span className='relative md:absolute w-full md:px-3 md:py-2 bottom-0 left-3 md:left-0 md:rounded-b-lg md:bg-slate-800/70 md:text-slate-200'>
 										<span>{caption}</span>
-										<span className='block text-sm text-slate-300 md:px-0'>
+										<span className='block text-sm md:px-0'>
 											{new Date(timestamp)
 												.toLocaleString()
 												.replace(', ', ' - ')
