@@ -18,7 +18,7 @@ export default function Home() {
 				<meta key='og:title' property='og:title' content='Terrandro - Home' />
 			</Head>
 			<h1 className='px-4 md:px-10 lg:px-20 xl:px-40 mt-2 md:mt-0 py-2 md:py-6 text-2xl'>
-				Intaandro
+				Home
 			</h1>
 			<section className='w-full px-0 md:px-10 lg:px-20 xl:px-40 py-2 md:py-6'>
 				<div className='w-full lg:w-4/5 xl:w-2/3 2xl:w-1/2'>
