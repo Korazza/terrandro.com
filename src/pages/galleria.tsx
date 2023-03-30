@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface InstagramMedia {
@@ -60,9 +61,10 @@ export default function Contatti({ media }: Props) {
 											className='w-full object-cover aspect-square md:rounded-lg mt-6 mb-2 md:my-0'
 										/>
 									) : (
-										<img
+										<Image
 											src={media_url}
 											alt={permalink}
+											fill
 											className='w-full object-cover aspect-square md:rounded-lg mt-6 mb-2 md:my-0'
 										/>
 									)}
