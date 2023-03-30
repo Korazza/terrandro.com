@@ -16,6 +16,11 @@ module.exports = {
 		]
 	},
 	images: {
-		domains: ['scontent.cdninstagram.com'],
+		remotePatterns: [
+		  {
+			protocol: 'https',
+			hostname: '**.cdninstagram.com',
+		  },
+		],
 	},
 }
