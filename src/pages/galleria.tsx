@@ -50,7 +50,7 @@ export default function Contatti({ media }: Props) {
 									href={permalink}
 									key={id}
 									target='_blank'
-									className='relative md:shadow-md md:drop-shadow-2xl transition ease-in-out duration-300 lg:hover:scale-105'
+									className='relative aspect-square md:shadow-md md:drop-shadow-2xl transition ease-in-out duration-300 lg:hover:scale-105'
 								>
 									{media_type.toLowerCase() === 'video' ? (
 										<video
