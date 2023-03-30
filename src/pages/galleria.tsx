@@ -66,6 +66,7 @@ export default function Contatti({ media }: Props) {
 											src={media_url}
 											alt={permalink}
 											fill
+											sizes='(max-width: 768px) 80vw, (max-width: 1280px) 100vw'
 											className='w-full object-cover aspect-square md:rounded-lg mt-6 mb-2 md:my-0'
 										/>
 									)}
