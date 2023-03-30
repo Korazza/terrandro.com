@@ -57,6 +57,7 @@ export default function Contatti({ media }: Props) {
 											muted
 											autoPlay
 											loop
+											playsInline
 											src={media_url}
 											className='w-full object-cover aspect-square md:rounded-lg mt-6 mb-2 md:my-0'
 										/>
